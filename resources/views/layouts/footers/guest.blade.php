@@ -1,3 +1,5 @@
+
+    @section('content')
 <footer class="footer">
     <div class="container">
         <nav class="float-left">
@@ -33,3 +35,4 @@
         </div>
     </div>
 </footer>
+@endsection
