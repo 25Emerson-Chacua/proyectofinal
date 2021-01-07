@@ -19,16 +19,6 @@
     <link type="image/x-icon" href="logo.ico" rel="shortcut icon"/>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
 
-
-<!-- DATATABLES 
-  <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/datatables/jquery.dataTables.min.css') }}">    
-  <link href="{{ url('/assets/nuestrosestilos/datatables/buttons.dataTables.min.css') }}" rel="stylesheet"/>
-  <link href="{{ url('/assets/nuestrosestilos/datatables/responsive.dataTables.min.css') }}" rel="stylesheet"/>
-  <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/bootstrap-select.min.css') }}">
--->
-
-
-
     </head>
     
     <body>
