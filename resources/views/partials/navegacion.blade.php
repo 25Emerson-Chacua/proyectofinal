@@ -32,7 +32,7 @@
                   </li>
 
                   <li>
-                    <a href="prestamos.php"><i class="fa fa-money"></i><span>Prestamos</span></a>
+                    <a href="{{ url('/categorias') }}"><i class="fa fa-money"></i><span>Categorias</span></a>
                   </li>
 
                   <li>

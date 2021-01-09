@@ -9,9 +9,9 @@
         <link href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url('/assets/bootstrap/css/mdb.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/bootstrap/bootstrap.min.css') }}"/>
+        
         <script src="{{ url('/assets/nuestrosestilos/js/demo-rtl.js') }}"></script>
 
- 
     <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/font-awesome.css') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/nanoscroller.css') }}"/>
     <link href="{{ url('/assets/bootstrap/css/myStyle.css') }}" rel="stylesheet">

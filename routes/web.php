@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Administracion;
 use App\Http\Controllers\ClientesController;
+use App\Http\Controllers\CategoriasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +27,15 @@ Route::get('clientes/actualizar/{id}', [ClientesController::class, 'formularioAc
 Route::post('clientes/actualizar/{id}', [ClientesController::class, 'actualizar'])->name('actualizarCliente');
 Route::get('clientes/eliminar/{id}', [ClientesController::class, 'eliminar'])->name('eliminarCliente');
 Route::get('clientes/activar/{id}', [ClientesController::class, 'activar'])->name('activarCliente');
-
 Route::get('clientes/consulta', [ClientesController::class, 'form_consulta'])->name('form_consultaProducto');
 Route::post('clientes/consulta', [ClientesController::class, 'consultar'])->name('consulta_cliente');
+
+// Categorias 
+Route::get('categorias', [CategoriasController::class, 'index'])->name('listadoCategorias');
+Route::get('categorias/registro', [CategoriasController::class , 'formularioReg'])->name('form_registroCategoria');
+Route::post('categorias/registro', [CategoriasController::class, 'registrar'])->name('registrarCategoria');
+Route::get('categorias/actualizar/{id}', [CategoriasController::class, 'formularioAct'])->name('form_actualizaCategoria');
+Route::post('categorias/actualizar/{id}', [CategoriasController::class, 'actualizar'])->name('actualizarCategoria');
+
+Route::get('categorias/eliminar/{id}', [CategoriasController::class, 'eliminar'])->name('eliminarCategoria');
+Route::get('categorias/activar/{id}', [CategoriasController::class, 'activar'])->name('activarCategoria');
