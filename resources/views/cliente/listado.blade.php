@@ -12,6 +12,9 @@ function activar() {
     
 }
 function desactivar() {
+    
+            
+            
     var respuesta =  confirm("Desea desactivar el cliente??");
     if(respuesta == true){
         return true;

@@ -1,5 +1,4 @@
-
-      <div style="background-color: #34495e;" class="clearfix">
+<div style="background-color: #34495e;" class="clearfix">
         <a href="{{url('/')}}" id="logo" class="navbar-brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
         <div class="clearfix" style="background-color: #34495e;">
           <div  class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs" aria-expanded="true" style="background-color: #ffffff">
@@ -36,7 +35,7 @@
                   </li>
 
                   <li>
-                    <a href="pagos.php"><i class="fa fa-star"></i><span>Pagos</span></a>
+                    <a href="{{ url('/productos') }}"><i class="fa fa-star"></i><span>Productos</span></a>
                   </li>
 
                   <li>
@@ -76,7 +75,3 @@
 <div id="content-wrapper">
   <div class="row">
   <div class="col-lg-12">
-
-
-
-
