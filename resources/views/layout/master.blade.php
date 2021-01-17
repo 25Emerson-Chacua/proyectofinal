@@ -3,21 +3,23 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>&#x2655; Granero superior</title>
+        <title>&#x210A; Granero Superior</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
         <link href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url('/assets/bootstrap/css/mdb.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/bootstrap/bootstrap.min.css') }}"/>
         
         <script src="{{ url('/assets/nuestrosestilos/js/demo-rtl.js') }}"></script>
 
-    <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/font-awesome.css') }}"/>
-    <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/nanoscroller.css') }}"/>
-    <link href="{{ url('/assets/bootstrap/css/myStyle.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/daterangepicker.css') }}" />
-    <link type="image/x-icon" href="logo.ico" rel="shortcut icon"/>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/font-awesome.css') }}"/>
+        <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/nanoscroller.css') }}"/>
+        <link href="{{ url('/assets/bootstrap/css/myStyle.css') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/daterangepicker.css') }}" />
+        <link type="image/x-icon" href="logo.ico" rel="shortcut icon"/>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
 
     </head>
     
@@ -28,7 +30,6 @@
                 @yield('content')
             </div>
 
-
             <script type="text/javascript" src="{{ url('/assets/bootstrap/js/jquery.min.js') }}"></script>
             <script type="text/javascript" src="{{ url('/assets/bootstrap/js/popper.min.js') }}"></script>
             <script type="text/javascript" src="{{ url('/assets/bootstrap/js/bootstrap.min.js') }}"></script>
@@ -36,14 +37,10 @@
     
             <script type="text/javascript" src="{{ url('/assets/nuestrosestilos/js/demo-rtl.js') }}"></script>
             <script type="text/javascript" src="{{ url('/assets/nuestrosestilos/js/scripts.js') }}"></script>
-
-
-
-
             
     </body>
     </div></div> </div></div></div>
-    <footer class="page-footer " style="background-color: #34495e;"  >
+    <footer class="page-footer " style="background-color: #FF5733;">
     <div class="container-fluid text-center text-md-left">
         <div class="row">
             <div class="col-md-3 mt-md-0 mt-3">
@@ -53,6 +50,7 @@
             <div class="col-md-3 mt-md-0 mt-3">
                 <h5 class="text-uppercase">
                     Granero Superior</h5>
+                    <img src="{{url('imagenes/contacto.png')}}"  height="150" >
             </div>
             <hr class="clearfix w-100 d-md-none pb-3">
             <div class="col-md-3 mb-md-0 mb-3">
@@ -63,14 +61,14 @@
                         <br><a href="#!">01 8000 183475</a>
                     </li>
                     <li>
-                        <a href="#!">WhatsApp: 310 389 56 09</a>
+                        <a href="#!">WhatsApp: +57 310 389 56 09</a>
                     </li>
                     <li>
                    
                         <a href="#!">Elaborado por: </a><br>
-                        <a href="#!">SEBASTIÁN DAVID CHAVES GARRETA</a>
-                        <a href="#!">WILINTON ANDRES MEJIA CHAMORRO</a>
-                        <a href="#!">EMERSON ALEXANDER CHACUA PÍSTALA</a>
+                        <a href="#!">Emerson Alexzander Chacua Pistala</a>
+                        <a href="#!">Wilinton Andres Mejia Chamorro</a>
+                        <a href="#!">Sebastian David Chaves Garreta</a>
                         
                     </li>
                 </ul>
@@ -79,7 +77,7 @@
         </div>
     </div>
 
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3">© 2021 Copyright:
         <a href="https://mdbootstrap.com/"> Granero Superior</a>
     </div>
     <!-- Copyright -->
