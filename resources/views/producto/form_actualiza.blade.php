@@ -26,7 +26,7 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
-        <input type="number" id='precioPro' name='precioPro' value="{{$producto->precioProducto}}" min='100'  class="form-control" placeholder="Cantidad" required>
+        <input type="number" id='precioPro' name='precioPro' value="{{$producto->precioProducto}}" min='100'  class="form-control" placeholder="Precio" required>
     </div>
 
     <div class="input-group mb-3">

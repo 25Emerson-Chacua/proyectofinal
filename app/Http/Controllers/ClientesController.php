@@ -23,11 +23,12 @@ class ClientesController extends Controller
     public function registrar( Request $request){
 
         $cliente = new Cliente();
-        $cliente->nombreCliente = $request->input('nombrecli');
-        $cliente->cedulaCliente = $request->input('cedula');
-        $cliente->DireccionCliente = $request->input('direccion');
-        $cliente->telefonoCliente = $request->input('telefono');
-        $cliente->generoCliente = $request->input('genero');
+        $cliente->nombreCliente = $request->input('nombreCli');
+        $cliente->cedula = $request->input('cedulaCli');
+        $cliente->genero = $request->input('generoCli');
+        $cliente->direccion = $request->input('direccionCli');
+        $cliente->telefono = $request->input('telefonoCli');
+        
         $cliente->save();
         return redirect()->route('listadoClientes');
     }
@@ -38,12 +39,12 @@ class ClientesController extends Controller
 
     public function actualizar(Request $request, $id){
         $clie = Cliente::findOrFail($id);
-        $clie->nombreCliente = $request->input('nombrecli');
-        $clie->cedulaCliente = $request->input('cedula');
-        $clie->DireccionCliente = $request->input('direccion');
-        $clie->telefonoCliente = $request->input('telefono');
-        $clie->estado = '1';
-        $clie->generoCliente = $request->input('genero');
+        $clie->nombreCliente = $request->input('nombreCli');
+        $clie->cedula = $request->input('cedulaCli');
+        $clie->genero = $request->input('generoCli');
+        $clie->direccion = $request->input('direccionCli');
+        $clie->telefono = $request->input('telefonoCli');    
+
         $clie->save();
         return redirect()->route('listadoClientes');
     }
@@ -64,9 +65,10 @@ class ClientesController extends Controller
         return view('cliente.form_consultar');
      }
  
-     public function consultar(Request $request){
+     public function consultar(Request $request)
+     {
         $nombre = $request->input('busqueda');
-        $producto = Cliente::where('cedulaCliente', 'like',$nombre)->first();
+        $producto = Cliente::where('cedula', 'like',$nombre)->first();
         if($producto)
         return view('cliente.resultado', compact('producto'));
          else

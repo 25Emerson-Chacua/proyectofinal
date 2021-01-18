@@ -8,11 +8,11 @@
             <div align="center" class="card carta borde" style=" width: 25rem;">
                 <h2 align="center" class="letra ">{{$producto->nombreProducto}}</h2>
 
-                <img src='{{url("/assets/img/productos/$producto->fotoProducto")}}' class="rounded" alt="..." height="250">
+                <img src='{{url("/imagenes/productos/$producto->foto")}}' class="rounded" alt="..." height="250">
                 <div >
                     <h6 class="text letra "> Identificador: {{$producto->id}} </h6>                    
-                    <h6 class="text letra "> Cantidad: {{$producto->cantidadProducto}} </h6>
-                    <h6 class="text letra "> Precio: {{$producto->precioProducto}} </h6>
+                    <h6 class="text letra "> Cantidad: {{$producto->cantidad}} </h6>
+                    <h6 class="text letra "> Precio: {{$producto->precio}} </h6>
                     <h6 class="text letra "> Categoria:  #{{$producto->categoria}} {{$producto->nombreCategoria}} </h6>
                 </div>
                     <a href='{{url("productos/actualizar/$producto->id")}}' class="boton_2"> Editar </a>

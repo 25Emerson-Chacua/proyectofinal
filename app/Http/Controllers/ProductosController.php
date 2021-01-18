@@ -11,11 +11,11 @@ use App\Models\Categoria;
 class ProductosController extends Controller
 {
     //
-    public function listado(){
-        
+    public function listado()
+    {
         $productos = DB::table('productos as pro')
                     ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                    ->select('pro.id','pro.precioProducto','pro.cantidadProducto','pro.nombreProducto', 'pro.fotoProducto', 'cat.nombreCategoria', 'pro.categoria')
+                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria')
                     ->orderby('pro.id','asc')
                     ->get();
         return view('producto.listado', ['productos' => $productos]);
@@ -23,7 +23,7 @@ class ProductosController extends Controller
     public function porProducto(){
         $productos = DB::table('productos as pro')
                     ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                    ->select('pro.id','pro.precioProducto','pro.nombreProducto','pro.cantidadProducto', 'pro.fotoProducto', 'cat.nombreCategoria', 'pro.categoria')
+                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria')
                     ->orderby('pro.nombreProducto','asc')
                     ->get();
         return view('producto.listado', ['productos' => $productos]);
@@ -32,7 +32,7 @@ class ProductosController extends Controller
     public function porCategoria(){
         $productos = DB::table('productos as pro')
                     ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                    ->select('pro.id','pro.precioProducto','pro.nombreProducto','pro.cantidadProducto', 'pro.fotoProducto', 'cat.nombreCategoria', 'pro.categoria')
+                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria')
                     ->orderby('pro.categoria','asc')
                     ->get();
         return view('producto.listado', ['productos' => $productos]);
@@ -41,15 +41,15 @@ class ProductosController extends Controller
     public function porPrecio(){
         $productos = DB::table('productos as pro')
                     ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                    ->select('pro.id','pro.precioProducto','pro.nombreProducto','pro.cantidadProducto', 'pro.fotoProducto', 'cat.nombreCategoria', 'pro.categoria')
-                    ->orderby('pro.precioProducto','asc')
+                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria')
+                    ->orderby('pro.precio','asc')
                     ->get();
         return view('producto.listado', ['productos' => $productos]);
     }
     public function detalle($id) {
         $productos = DB::table('productos as pro')
                     ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                    ->select('pro.id','pro.precioProducto','pro.cantidadProducto','pro.nombreProducto', 'pro.fotoProducto', 'cat.nombreCategoria', 'pro.categoria')
+                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria')
                     ->where('pro.id',"$id")
                     ->first(); 
         return view('producto.detalle', ['productos' => $productos]);
@@ -65,13 +65,13 @@ class ProductosController extends Controller
         if($repetido == 0){*/
             $producto = new Producto();
             $producto->nombreProducto = $request->input('nombrePro');
-            $producto->cantidadProducto = $request->input('cantidadPro');
-            $producto->precioProducto = $request->input('precioPro');
+            $producto->cantidad = $request->input('cantidadPro');
+            $producto->precio = $request->input('precioPro');
             if($request->hasFile('urlfoto')){
                 $file = $request->file("urlfoto");
                 $nombrearchivo = $file->getClientOriginalName();
                 $file->move(public_path("/assets/img/productos/"),$nombrearchivo);
-                $producto->fotoProducto = $nombrearchivo;
+                $producto->foto = $nombrearchivo;
             }
             $producto->categoria = $request->input('categorias');
             $producto->save();
@@ -104,9 +104,17 @@ class ProductosController extends Controller
     }
 
     public function eliminar($id){
-        $product = Producto::findOrFail($id);
-        $product->delete();
-        return view('inventario.productos.confirmacion');
+        $clie = Producto::findOrFail($id);
+        $clie->estado = '0';
+        $clie->save();
+        return redirect()->route('listadoProductos');
+    }
+
+    public function activar($id){
+        $clie = Producto::findOrFail($id);
+        $clie->estado = '1';
+        $clie->save();
+        return redirect()->route('listadoProductos');
     }
 
     public function formulario_consultar(){
@@ -118,7 +126,7 @@ class ProductosController extends Controller
  
         $producto = DB::table('productos as pro')
                      ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                     ->select('pro.id','pro.precioProducto','pro.nombreProducto', 'pro.fotoProducto','pro.cantidadProducto', 'pro.categoria','cat.nombreCategoria')
+                     ->select('pro.id','pro.precio','pro.nombreProducto', 'pro.foto','pro.cantidad', 'pro.categoria','cat.nombreCategoria')
                      ->where('pro.id', "$codigo")
                      ->first();
         if($producto)

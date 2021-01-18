@@ -11,10 +11,8 @@ function activar() {
     }
     
 }
-function desactivar() {
-    
-            
-            
+function desactivar() 
+{
     var respuesta =  confirm("Desea desactivar el cliente??");
     if(respuesta == true){
         return true;
@@ -86,10 +84,11 @@ function desactivar() {
                                     </td>
                                     <td> {{ $c->id }} </td>
                                     <td> {{ $c->nombreCliente }} </td>
-                                    <td> {{ $c->cedulaCliente }} </td>
-                                    <td> {{ $c->DireccionCliente }} </td>
-                                    <td> {{ $c->telefonoCliente }}</td>
-                                    <td> {{ $c->generoCliente }}</td>
+                                    <td> {{ $c->cedula }} </td>
+                                    <td> {{ $c->genero}}</td>
+                                    <td> {{ $c->direccion }} </td>
+                                    <td> {{ $c->telefono }}</td>
+                                    
                                     <td> 
                                     @if($c->estado==1)
                                     <span class="label bg-primary">Activado</span>

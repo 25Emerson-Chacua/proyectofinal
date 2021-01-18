@@ -6,9 +6,10 @@
         <title>&#x210A; Granero Superior</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
+
         <link href="{{ url('/assets/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+        <link href="{{ url('/assets/bootstrap/css/style.css') }}" rel="stylesheet">
         <link href="{{ url('/assets/bootstrap/css/mdb.min.css') }}" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/bootstrap/bootstrap.min.css') }}"/>
         
@@ -65,10 +66,10 @@
                     </li>
                     <li>
                    
-                        <a href="#!">Elaborado por: </a><br>
-                        <a href="#!">Emerson Alexzander Chacua Pistala</a>
-                        <a href="#!">Wilinton Andres Mejia Chamorro</a>
-                        <a href="#!">Sebastian David Chaves Garreta</a>
+                        <a >Elaborado por: </a><br>
+                        <a >Emerson Alexander Chacua Pistala</a><br>
+                        <a >Wilinton Andres Mejia Chamorro</a><br>
+                        <a >Sebastian David Chaves Garreta</a>
                         
                     </li>
                 </ul>

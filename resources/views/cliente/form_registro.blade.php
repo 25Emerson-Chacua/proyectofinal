@@ -17,14 +17,14 @@
                                 <div class="col">
                                     <!-- First name -->
                                     <div class="md-form">
-                                        <input type="text" id="nombrecli" name="nombrecli" class="form-control" required>
+                                        <input type="text" id="nombreCli" name="nombreCli" class="form-control" required>
                                         <label for="materialRegisterFormFirstName">Nombre Cliente</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <!-- Last name -->
                                     <div class="md-form">
-                                        <input type="text" id="cedula" name="cedula" class="form-control"required>
+                                        <input type="text" id="cedulaCli" name="cedulaCli" class="form-control"required>
                                         <label for="materialRegisterFormLastName">Cedula</label>
                                     </div>
                                 </div>
@@ -33,14 +33,14 @@
                                 <div class="col">
                                     <!-- First name -->
                                     <div class="md-form">
-                                        <input type="text" id="direccion" name="direccion" class="form-control"required>
+                                        <input type="text" id="direccionCli" name="direccionCli"class="form-control"required>
                                         <label for="materialRegisterFormFirstName">Direccion</label>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <!-- Last name -->
                                     <div class="md-form">
-                                        <input  type="text" id="telefono" name="telefono" class="form-control" required>
+                                        <input  type="text" id="telefonoCli" name="telefonoCli" class="form-control" required>
                                         <label for="materialRegisterFormLastName">Teléfono</label>
                                     </div>
                                 </div>
@@ -51,12 +51,12 @@
                                     <label for="materialRegisterFormFirstName">Genero</label>
 
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="genero" id="m"  value="m" required/>
+                                    <input class="form-check-input" type="radio" name="generoCli" id="m"  value="m" required/>
                                     <label class="form-check-label" for="inlineRadio1">Masculino</label>
                                     </div>
 
                                     <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="genero" id="f" value="f"/>
+                                    <input class="form-check-input" type="radio" name="generoCli" id="f" value="f"/>
                                     <label class="form-check-label" for="inlineRadio2">Femenino</label>
                                     </div>
                                 </div>

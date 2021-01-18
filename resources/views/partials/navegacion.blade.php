@@ -1,23 +1,21 @@
-<body background="{{url('imagenes/fondo.jpg')}}">
+
 <div style="background-color: #FF5733;" class="clearfix">
         <a href="{{url('/')}}" id="logo" class="navbar-brand">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        <div class="clearfix" style="background-color: #FF5733;">
+       
           <div  class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs" aria-expanded="true" style="background-color: #FF5733">
                   <ul class="nav navbar-nav pull-left" >
                     <li>
-                      <a  id="make-small-nav" style="color:black"> 
-                        <img src="{{url('imagenes/logo.png')}}" height="40">Granero Superior
+                      <a  id="make-small-nav" style="color:white"> 
+                        <img src="{{url('imagenes/logoblanco.png')}}" height="40">Granero Superior
                       </a>               
                     </li>
                   </ul>
           </div>          
         </div>
       </div>
-
-<div id="page-wrapper" class="container">
-<div class="row">
-        <div id="nav-col">
-          <section id="col-left" class="col-left-nano">
+ 
+      <nav class="navbar navbar-light" style="background-color: #FF5733;">
+  
             <div id="col-left-inner" class="col-left-nano-content">
               <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
                 <ul class="nav nav-pills nav-stacked">
@@ -42,37 +40,7 @@
                     <a href="usuarios.php"><i class="fa fa-user"></i><span>Usuarios</span></a>
                   </li>
 
-                  <li>
-                    <a href="gastos.php"><i class="fa fa-bullhorn"></i><span>Gastos</span></a>
-                  </li>
-
-                  <li>
-                    <a href="#" class="dropdown-toggle">
-                      <i class="fa fa-bar-chart-o"></i>
-                      <span>Consultas</span>
-                      <i class="fa fa-angle-right drop-icon"></i>
-                    </a>
-                    <ul class="submenu">
-                      <li>
-                        <a href="#">Consulta de Prestamos</a>
-                      </li>
-                      <li>
-                        <a href="#">Consulta de Pagos</a>
-                      </li>
-                      <li>
-                        <a href="#">Consulta diarias</a>
-                      </li>
-                    </ul>
-                  </li>
                 </ul>
               </div>
             </div>
-          </section>
-           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-          </div>
-        
-<div id="content-wrapper">
-  <div class="row">
-  <div class="col-lg-12">
-</body>
+      </nav>

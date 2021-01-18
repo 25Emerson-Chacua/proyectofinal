@@ -47,10 +47,10 @@ function desactivarCat() {
 
                 <div class="main-box-body clearfix">
                     <div class="table-responsive">
-                        <table class="table">
+                        <table class="table" align="center">
                             <thead class="black white-text">
                                 <tr>
-                                    <th>Op</th>
+                                    <th >Op</th>
                                     <th>ID</th>
                                     <th>Categoria</th>
                                     <th>Descripcion</th>

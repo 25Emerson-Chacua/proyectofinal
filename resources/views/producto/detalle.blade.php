@@ -17,11 +17,11 @@
         <div  class="col-md-4">
             <div align="center" class="card carta border" style=" width: 25rem;">
                 <h2 align="center" class="letra ">{{$productos->nombreProducto}}</h2>
-                <img src='{{url("/imagenes/productos/$productos->fotoProducto")}}' class="rounded" alt="..." height="270">
+                <img src='{{url("/imagenes/productos/$productos->foto")}}' class="rounded" alt="..." height="270">
                 <div >
                     <h5 class="text letra "> Identificador: {{$productos->id}} </h5>                    
-                    <h5 class="text letra "> Cantidad: {{$productos->cantidadProducto}} </h5>
-                    <h5 class="text letra "> Precio: {{$productos->precioProducto}} </h5>
+                    <h5 class="text letra "> Cantidad: {{$productos->cantidad}} </h5>
+                    <h5 class="text letra "> Precio: {{$productos->precio}} </h5>
                     <h5 class="text letra "> Categoria: #{{$productos->categoria}} {{$productos->nombreCategoria}} </h5>
                 </div>
                 <div class="form-row mb-4">

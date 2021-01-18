@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 @extends('layout.master')
     @section('content')
-    <body background="{{url('imagenes/fondo.jpg')}}">
+    <body background="{{url('imagenes/whitey.jpg')}}">
         <div class="container" align="center">
-        <h1 style="color: black"> ¡BIENVENIDOS AL GRANERO SUPERIOR! </h1>
-        <h5 style="color: black;"><br>Nuestras prioridad es llevar a nuestros clientes la mejor calidad</h5>
-
+            <h1 style="color: black"> ¡BIENVENIDOS AL GRANERO SUPERIOR! </h1>
+            <h5 style="color: black;"><br>Nuestra prioridad es llevar a nuestros clientes la mejor calidad</h5>
 
             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -16,34 +15,20 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="{{url('imagenes/img1.png')}}" class="d-block w-100" alt="..." height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            
-                            <h1> &#x210A;</h1>
-                        </div>
                     </div>
+
                     <div class="carousel-item">
                         <img src="{{url('imagenes/img2.png')}}" class="d-block w-100" alt="..." height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            
-                            <h1> &#x2655;</h1>
-                        </div>
                     </div>
+
                     <div class="carousel-item">
                         <img src="{{url('imagenes/img3.png')}}" class="d-block w-100" alt="..." height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            
-                            <h1> &#x2655;</h1>
-                        </div>
                     </div>
+
                     <div class="carousel-item">
                         <img src="{{url('imagenes/img4.png')}}" class="d-block w-100" alt="..." height="500">
-                        <div class="carousel-caption d-none d-md-block">
-                            
-                            <h1> &#x2655;</h1>
-                        </div>
                     </div>
                 </div>
-                    
                 <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
@@ -55,7 +40,7 @@
             </div>
 
             <br><br>
-            <img src="{{url('imagenes/comestibles.png')}}" height="100">
+            <img src="{{url('imagenes/logo.png')}}" height="100">
 
             <br><br>
         </div>
