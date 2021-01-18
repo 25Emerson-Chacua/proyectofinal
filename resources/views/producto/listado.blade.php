@@ -15,6 +15,14 @@
                 <div >
                     <a class="btn btn-success" href='{{url()->previous()}}'> Regresar </a>
                 </div></br></br>
+
+                <div class="card-body">
+                    <h1 class="card-title"> REGISTRAR</h1>
+                </div>
+                <div >
+                <a href="{{ url('productos/registro') }}" class="btn btn-success" > <i class="fa fa-plus-circle"></i> Nuevo </a> 
+                </div></br></br>
+               
             </div>
         </div>
        
@@ -57,7 +65,7 @@
                             <div class="col">
                                 <form action='{{url("productos/consulta")}}' method= "POST" class="form-inline md-form mr-auto mb-4">
                                     @csrf
-                                    <input   type="text" id="codigo" name="codigo"  class="form-control" placeholder="Ingrese codigo" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                                    <input   type="text" id="codigo" name="codigo"  class="form-control" placeholder="ISBN" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                                     <button class="btn btn-primary" type="submit" value="Buscar">Buscar</button>
                                 </form>  
                             </div>
@@ -72,9 +80,9 @@
                         <div class="col-md-4">
                             <div class="card" style="width: 20rem;">
                                 <div class="letra" align="center">
-                                    <h5> {{ $p->nombreProducto}} </h5>
+                                    <h2 > {{ $p->nombreProducto}} </h2>
                                 </div>
-                                <img src='{{url("/imagenes/productos/$p->foto")}}' class="rounded" height="200">
+                                <img src='{{url("/imagenes/productos/$p->foto")}}' class="rounded" alt="..." height="200">
                                 <div align="center">
                                     <h6 class="letra"> Precio: {{$p->precio}} </h6>
                                     <h6 class="letra"> {{$p->nombreCategoria}} </h6>
@@ -85,20 +93,21 @@
                                     <!-- Etiquetas de tipo text con un value asignado -->
                                     <div class="form-group">
                                         <label for="cantidad">¿Cuántos ejemplares desea adquirir?</label>
-                                        <label style="background-color: white !important;">({{$p->cantidad}} disponibles)</label>
+                                        <label style="background-color: Gray !important;">({{$p->cantidad}} disponibles)</label>
                                         <input required type="number" min='1' max='{{$p->cantidad}}' id="cantidad" name="cantidad"  class="form-control" placeholder="Cantidad" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                                     </div>
                                     <!-- Etiquetas de tipo button -->
                                     <div align="center"><button type="submit" >Añadir al carrito</button></div>
                                 </form>
-                                <a href='{{url("productos/detalle/$p->id" )}}' class="btn btn-primary" > Ver detalles </a>   
-                                               
+                                <a href='{{url("productos/detalle/$p->id" )}}' class="btn btn-primary" > Ver detalles </a>                    
                             </div>  
                         </div>
                         @endforeach
                     </div>
                 </div>
 <br>
+
+
 
     </div>
         </div>
@@ -142,7 +151,7 @@
             </div>
         </div>
 
-        &nbsp;
+        
     </div>
 </div>
 @endif   

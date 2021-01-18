@@ -18,7 +18,7 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
-        <input type="number" id='cantidadPro' name='cantidadPro' value="{{$producto->cantidadProducto}}" min='1' max='1000' class="form-control" placeholder="Cantidad" required>
+        <input type="number" id='cantidadPro' name='cantidadPro' value="{{$producto->cantidad}}" min='1' max='1000' class="form-control" placeholder="Cantidad" required>
     </div>
 
     <label for="precioPro">Precio </label>
@@ -26,7 +26,7 @@
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">@</span>
         </div>
-        <input type="number" id='precioPro' name='precioPro' value="{{$producto->precioProducto}}" min='100'  class="form-control" placeholder="Precio" required>
+        <input type="number" id='precioPro' name='precioPro' value="{{$producto->precio}}" min='100'  class="form-control" placeholder="Precio" required>
     </div>
 
     <div class="input-group mb-3">

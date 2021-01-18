@@ -13,7 +13,7 @@
                     <p class="h4 mb-4">Formulario de Actualizacion</p>
                     <div class="form-group">
                         <label for="nombrePro">Nombre </label>
-                        <input type="text" id="nombrecli" name="nombrecli" value="{{$clientes->nombreCliente}}" class="form-control" placeholder="..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" id="nombreCli" name="nombreCli" value="{{$clientes->nombreCliente}}" class="form-control" placeholder="..." required >
                     </div>
 
                     <!-- Etiquetas de tipo number -->

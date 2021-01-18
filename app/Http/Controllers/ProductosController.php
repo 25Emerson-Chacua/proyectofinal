@@ -90,13 +90,13 @@ class ProductosController extends Controller
     public function actualizar(Request $request, $id){
         $producto = Producto::findOrFail($id);
         $producto->nombreProducto = $request->input('nombrePro');
-        $producto->cantidadProducto = $request->input('cantidadPro');
-        $producto->precioProducto = $request->input('precioPro');
+        $producto->cantidad = $request->input('cantidadPro');
+        $producto->precio = $request->input('precioPro');
         if($request->hasFile('urlfoto')){
             $file = $request->file("urlfoto");
             $nombrearchivo = $file->getClientOriginalName();
             $file->move(public_path("/assets/img/productos/"),$nombrearchivo);
-            $producto->fotoProducto = $nombrearchivo;
+            $producto->foto = $nombrearchivo;
         }
         $producto->categoria = $request->input('categorias');
         $producto->save();
