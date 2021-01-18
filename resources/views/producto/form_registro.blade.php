@@ -24,50 +24,55 @@
             <div class="card" style="width: 109rem;">
 
 
-                <h1 class="titulo "> Formulario de Registro </h1>
-                <form class="letra" style="background-color: #66bb6a;" action='{{url("productos/registro")}}' enctype="multipart/form-data" method= "POST">
+                
+                <form class="text-center border border-light p-5" action='{{url("productos/registro")}}' enctype="multipart/form-data" method= "POST">
                     @csrf
-                    <label for="nombrePro">Nombre </label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">&#9020;</span>
+                    <p class="h4 mb-4">Registro de producto</p>
+                    <div class="form-row mb-4">
+                        <div class="col">
+                            <div class="md-form">
+                                <input type="text" id="nombrePro" name="nombrePro"  class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                                <label for="nombrePro">Nombre </label>
+                            </div>
                         </div>
-                        <input type="text" id="nombrePro" name="nombrePro"  class="form-control" placeholder="Nombre" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
-                    </div>
 
-                    <label for="cantidadPro">Cantidad </label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">&#9020;</span>
-                        </div>
-                        <input type="number" id='cantidadPro' name='cantidadPro' min='1' max='1000' class="form-control" placeholder="Cantidad" required>
-                    </div>
-
-                    <label for="precioPro">Precio </label>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">&#9020;</span>
-                        </div>
-                        <input type="number" id='precioPro' name='precioPro' min='100'  class="form-control" placeholder="Precio" required>
-                    </div>
-
-                    
-                    <div class="input-group mb-3">
-                        <div class="form-group">
-                            <strong>Imagen:</strong></br>
-                            <input type="file" name="urlfoto" required>
+                        <div class="col">
+                            <div class="md-form">
+                                <input type="number" id='cantidadPro' name='cantidadPro' min='1' max='1000' class="form-control" placeholder="" required>
+                                <label for="cantidadPro">Cantidad </label>
+                            </div>
                         </div>
                     </div>
 
-                    <label for="productos">Tipo de Producto</label> 
+                    <div class="form-row mb-4">
+                        
+                        <div class="col">
+                            <div class="md-form">
+                                <input type="number" id='precioPro' name='precioPro' min='100'  class="form-control" placeholder="" required>
+                                <label for="precioPro">Precio </label>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="md-form">
+                                <strong>Imagen:</strong></br>
+                                <input type="file" name="urlfoto" required>
+                            </div>
+                        </div>
+                    </div>
+            
+
+                    <label for="productos">Seleccione tipo</label> 
                     <select class="custom-select-sm" id="productos" name="categorias" >
                         @foreach($categorias as $c)
                             <option value="{{$c->id}}">{{$c->nombreCategoria}}</option>
                         @endforeach
                     </select>
                     </br></br</br></br>
+                    
+                    
                     <button type="submit" class="boton_personalizado">Registrar</button>
-                    <button type="reset" class="boton_personalizado">Limpiar</button>
+                    <button type="reset" class="boton_personalizado">Limpiar</button><br>
                     <a href='{{url()->previous()}}' role="button" class="boton_personalizado_1">Cancelar</a>
                 </form>
                 </br>

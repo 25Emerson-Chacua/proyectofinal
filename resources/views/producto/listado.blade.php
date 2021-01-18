@@ -1,10 +1,8 @@
 @extends('layout.master')
 @section('content')
 @if(count($productos)===0)
-    </br></br></br></br></br>
 
-
-    <div class="container"align="center"> 
+<div class="container" align="center"> 
     <div class="row">
        
         <div class="col-md-4">
@@ -22,65 +20,54 @@
                 <div >
                 <a href="{{ url('productos/registro') }}" class="btn btn-success" > <i class="fa fa-plus-circle"></i> Nuevo </a> 
                 </div></br></br>
-               
             </div>
         </div>
-       
     </div>
 </div>
-    </br></br></br></br></br></br></br></br></br></br>
+</br></br></br></br></br></br></br></br></br></br>
+
 @else
-<div class="container"align="right"> 
-    <div class="row">
-       
 
-      
-        <div class="col-md-4">
-            <div class="card" style="width: 109rem;">
+    <header class="main-box-header clearfix">
+        <div class="form-row mb-4">
+            <div class="col">
+                <h2 class="box-title" style="color: black">Productos                      
+                <a href="{{ url('productos/registro') }}" class="btn btn-success" > <i class="fa fa-plus-circle"></i> Nuevo </a> 
+                </h2>
+            </div>
 
+            <div class="col"> </div>
+                <div class="col">
+                    <form action='{{url("productos/consulta")}}' method= "POST" class="form-inline md-form mr-auto mb-4">
+                        @csrf
+                        <input   type="text" id="codigo" name="codigo"  class="form-control" placeholder="Ingrese codigo" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+                        <button class="btn btn-primary" type="submit" value="Buscar">Buscar</button>
+                    </form> 
+                    <div class="letra" style="color: black">
+                    <div class=" dropdown show" id="sidebar-nav">        
+                        <a  class=" boton_2 dropdown-toggle" href="#" id="dropdownMenu2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black"> 
+                            Ordenar por    
+                        </a> 
 
-
-
-
-
-<div class="container"align="center"> 
-    <div class="row">
-       
-
-  
-        <div class="col-md-4">
-            <div class="card" style="width: 79rem;">
-
-  
-                <header class="main-box-header clearfix">
-
-                    <div class="form-row mb-4">
-                        <div class="col">
-                            <h2 class="box-title" style="color: black">Productos                      
-                                <a href="{{ url('productos/registro') }}" class="btn btn-success" > <i class="fa fa-plus-circle"></i> Nuevo </a> 
-                            </h2>
+                        <div class="dropdown-menu " aria-labelledby="dropdownMenu2" >
+                            <a class="dropdown-item descripcion_2 " href='{{ route("porProducto") }}' >Nombre</a>
+                            <a class="dropdown-item descripcion_2 " href='{{ route("porCategoria") }}' >Categoria</a>
+                            <a class="dropdown-item descripcion_2 " href='{{ route("porPrecio") }}'>Precio</a>
                         </div>
-                        <div class="col"> </div>
+                    </div> 
+                </div> 
+                </br></br>   
+            </div>
+        </div>
+    </header>
 
-                            <div class="col">
-                                <form action='{{url("productos/consulta")}}' method= "POST" class="form-inline md-form mr-auto mb-4">
-                                    @csrf
-                                    <input   type="text" id="codigo" name="codigo"  class="form-control" placeholder="ISBN" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
-                                    <button class="btn btn-primary" type="submit" value="Buscar">Buscar</button>
-                                </form>  
-                            </div>
-        
-                    </div>   
-   
-               </header>
-
-                <div class="container"> 
+                <div class="container" align="center"> 
                     <div class="row">
                         @foreach($productos as $p)
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <div class="card" style="width: 20rem;">
                                 <div class="letra" align="center">
-                                    <h2 > {{ $p->nombreProducto}} </h2>
+                                    <h4> {{ $p->nombreProducto}} </h4>
                                 </div>
                                 <img src='{{url("/imagenes/productos/$p->foto")}}' class="rounded" alt="..." height="200">
                                 <div align="center">
@@ -93,7 +80,7 @@
                                     <!-- Etiquetas de tipo text con un value asignado -->
                                     <div class="form-group">
                                         <label for="cantidad">¿Cuántos ejemplares desea adquirir?</label>
-                                        <label style="background-color: Gray !important;">({{$p->cantidad}} disponibles)</label>
+                                        <label style="background-color: light !important;">({{$p->cantidad}} unidades)</label>
                                         <input required type="number" min='1' max='{{$p->cantidad}}' id="cantidad" name="cantidad"  class="form-control" placeholder="Cantidad" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
                                     </div>
                                     <!-- Etiquetas de tipo button -->
@@ -101,58 +88,10 @@
                                 </form>
                                 <a href='{{url("productos/detalle/$p->id" )}}' class="btn btn-primary" > Ver detalles </a>                    
                             </div>  
+                            <br>
                         </div>
                         @endforeach
                     </div>
                 </div>
-<br>
-
-
-
-    </div>
-        </div>
-       
-
-
-       
-    </div>
-</div>
-
-
-
-
-</div>
-        </div>
-
-
-        <div class="col-md-8">
-            <div class="card" style="width: 25rem;">
-                <div class="card-body">
-                    <h1 class="card-title"> 
-                    
-                    <div class="letra" style="color: black">
-                            <div class=" dropdown show" id="sidebar-nav">        
-                                <a  class=" boton_2 dropdown-toggle" href="#" id="dropdownMenu2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black"> 
-                                    Ordenar por    
-                                </a> 
-
-                                <div class="dropdown-menu " aria-labelledby="dropdownMenu2" >
-                                    <a class="dropdown-item descripcion_2 " href='{{ route("porProducto") }}' >Nombre</a>
-                                    <a class="dropdown-item descripcion_2 " href='{{ route("porCategoria") }}' >Categoria</a>
-                                    <a class="dropdown-item descripcion_2 " href='{{ route("porPrecio") }}'>Precio</a>
-                                </div>
-                            </div> 
-                    </div>
-                    </br></br>
-                    
-                     </h1>
-                </div>
-
-            </div>
-        </div>
-
-        
-    </div>
-</div>
 @endif   
 @stop

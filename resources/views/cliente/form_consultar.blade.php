@@ -22,7 +22,7 @@
                                 <!-- Etiquetas de tipo text con un value asignado -->
                                 <div class="form-group">
                                     <label for="nombrePro">Cedula Cliente </label>
-                                    <input required type="text" id="busqueda" name="busqueda"  class="form-control" placeholder="Numero de Cedula" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <input required type="text" id="busqueda" name="busqueda"  class="form-control" placeholder="Numero de Cedula">
                                 </div>
                                 <!-- Etiquetas de tipo button -->
                                 <button type="submit" class="btn btn-primary">Buscar</button>

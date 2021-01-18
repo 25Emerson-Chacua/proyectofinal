@@ -17,7 +17,7 @@
         <div  class="col-md-4">
             <div align="center" class="card carta border" style=" width: 25rem;">
                 <h2 align="center" class="letra ">{{$productos->nombreProducto}}</h2>
-                <img src='{{url("/imagenes/productos/$productos->foto")}}' class="rounded" alt="..." height="270">
+                <img src='{{url("/imagenes/productos/$productos->foto")}}' class="rounded" alt="..." height="250">
                 <div >
                     <h5 class="text letra "> Identificador: {{$productos->id}} </h5>                    
                     <h5 class="text letra "> Cantidad: {{$productos->cantidad}} </h5>

@@ -11,8 +11,7 @@
                 
                 <form class="text-center border border-light p-5" action="{{route('registrarCliente')}}" method= "POST"> 
                     @csrf
-
-                    <p class="h4 mb-4">Formulario de Registro</p>
+                    <p class="h4 mb-4">Registro de Clientes</p>
                     <div class="form-row mb-4">
                                 <div class="col">
                                     <!-- First name -->
@@ -60,12 +59,12 @@
                                     <label class="form-check-label" for="inlineRadio2">Femenino</label>
                                     </div>
                                 </div>
-                                
-
                     </div>
 
                     <!-- Sign up button -->
-                    <button class="btn btn-info my-4 btn-block" type="submit">Registar</button>
+                    <button type="submit" class="boton_personalizado">Registrar</button>
+                    <button type="reset" class="boton_personalizado">Limpiar</button><br>
+                    <a href='{{url()->previous()}}' role="button" class="boton_personalizado_1">Cancelar</a>
 
                     </form>
                          

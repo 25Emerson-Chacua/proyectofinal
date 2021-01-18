@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>&#x210A; Granero Superior</title>
+        <title>Granero Superior</title>
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
         
         <script src="{{ url('/assets/nuestrosestilos/js/demo-rtl.js') }}"></script>
 
+        <link rel="icon" href="imagenes/icono.svg" type="image/x-icon">
         <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/font-awesome.css') }}"/>
         <link rel="stylesheet" type="text/css" href="{{ url('/assets/nuestrosestilos/css/libs/nanoscroller.css') }}"/>
         <link href="{{ url('/assets/bootstrap/css/myStyle.css') }}" rel="stylesheet">
@@ -50,7 +51,7 @@
             </div>
             <div class="col-md-3 mt-md-0 mt-3">
                 <h5 class="text-uppercase">
-                    Granero Superior</h5>
+                    ¡SIEMPRE A TU SERVICIO!</h5>
                     <img src="{{url('imagenes/contacto.png')}}"  height="150" >
             </div>
             <hr class="clearfix w-100 d-md-none pb-3">
@@ -65,7 +66,6 @@
                         <a href="#!">WhatsApp: +57 310 389 56 09</a>
                     </li>
                     <li>
-                   
                         <a >Elaborado por: </a><br>
                         <a >Emerson Alexander Chacua Pistala</a><br>
                         <a >Wilinton Andres Mejia Chamorro</a><br>
