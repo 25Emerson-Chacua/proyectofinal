@@ -19,6 +19,7 @@ use App\Http\Controllers\ProductosController;
 
 //¡BIENVENIDOS AL SUPERMERCADO!
 Route::get('/', [Administracion::class, 'index']) ;
+Route::get('descripcion', [Administracion::class, 'general'] );
 
 // Clientes
 Route::get('clientes', [ClientesController::class, 'index'] )->name('listadoClientes');
