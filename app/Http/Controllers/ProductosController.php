@@ -15,7 +15,7 @@ class ProductosController extends Controller
     {
         $productos = DB::table('productos as pro')
                     ->join('categorias as cat', 'pro.categoria', '=', 'cat.id')
-                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria')
+                    ->select('pro.id','pro.precio','pro.cantidad','pro.nombreProducto', 'pro.foto', 'cat.nombreCategoria', 'pro.categoria','pro.estado')
                     ->orderby('pro.id','asc')
                     ->get();
         return view('producto.listado', ['productos' => $productos]);
@@ -92,6 +92,7 @@ class ProductosController extends Controller
         $producto->nombreProducto = $request->input('nombrePro');
         $producto->cantidad = $request->input('cantidadPro');
         $producto->precio = $request->input('precioPro');
+        $producto->estado = $request->input('estadoPro');
         if($request->hasFile('urlfoto')){
             $file = $request->file("urlfoto");
             $nombrearchivo = $file->getClientOriginalName();

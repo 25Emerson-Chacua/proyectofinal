@@ -1,6 +1,30 @@
 @extends('layout.master')
 @section('content')
 
+<script type="text/javascript">
+    function activarPro() 
+    {
+        var respuesta =  confirm("Desea activar la categoria??");
+        if(respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+    function desactivarPro() {
+        var respuesta =  confirm("Desea desactivar la categoria??");
+        if(respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+</script>
+
 <div class="container"align="center"> 
     <div class="row">
        
@@ -27,17 +51,18 @@
                 <div class="form-row mb-4">
                             <div class="col">
                                 <!-- First name -->
-                                <a href='{{url("productos/actualizar/$productos->id")}}' class="btn btn-primary" > Editar </a>
+                                <a href='{{url("productos/actualizar/$productos->id")}}' class="btn btn-primary"><i class="fa fa-pencil"></i></a>
                             </div>
                             <div class="col">
                                 <!-- Last name -->
-                                <a class="boton_2" href="#" role="button" data-toggle="modal" data-target="#Eliminar">Eliminar</a>  
+                                <a href='{{url("productos/eliminar/$productos->id")}}' class="btn btn-danger" onclick="return desactivarPro()"><i class="fa fa-close"></i></a>  
+                                
                             </div>
                             <div class="col">
-                                  <a href="{{route('listadoProductos')}}" class="btn btn-success" >Volver </a>
-                            </div>
+                                  <a href="{{route('listadoProductos')}}" class="btn btn-success" >«</a>
+                            </div>  
                 </div> 
-                </div>         
+            </div>         
         </div>
         <div  class="col-md-4">
         </div>
@@ -64,6 +89,7 @@
                     </br> </br> 
             </div>    
         </div>  
+        
     </div> 
 </div>
 

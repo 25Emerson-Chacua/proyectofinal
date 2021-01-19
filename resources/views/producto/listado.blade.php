@@ -2,6 +2,30 @@
 @section('content')
 @if(count($productos)===0)
 
+<script type="text/javascript">
+    function activarPro() 
+    {
+        var respuesta =  confirm("Desea activar la producto??");
+        if(respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+    function desactivarPro() {
+        var respuesta =  confirm("Desea desactivar la producto??");
+        if(respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+</script>
+
 <div class="container" align="center"> 
     <div class="row">
        
@@ -66,6 +90,7 @@
                         @foreach($productos as $p)
                         <div class="col-md-3">
                             <div class="card" style="width: 20rem;">
+                           
                                 <div class="letra" align="center">
                                     <h4> {{ $p->nombreProducto}} </h4>
                                 </div>
@@ -73,6 +98,13 @@
                                 <div align="center">
                                     <h6 class="letra"> Precio: {{$p->precio}} </h6>
                                     <h6 class="letra"> {{$p->nombreCategoria}} </h6>
+                                    <h6 class="letra"> Estado: {{$p->estado}} </h6>
+
+                                    @if($p->estado==1)
+                                    <span class="label bg-primary">Activado</span>
+                                    @else
+                                    <span class="label bg-warning">Desactivado</span>
+                                    @endif
                                 </div>
                                 <a class="btn btn-warning" href="#" role="button" data-toggle="collapse" data-target="#comprar{{$p->id}}">Comprar</a>
                                 <form id="comprar{{$p->id}}" class="letra collapse" action='{{url("productos/comprar")}}' method= "POST">

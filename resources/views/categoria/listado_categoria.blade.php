@@ -60,17 +60,14 @@ function desactivarCat() {
                                 @foreach($categorias as $c)
                                 <tr>
                                 
-                                    <td>
-                                        
+                                    <td>  
                                         @if($c->estado==1)
                                         <a href="{{route('form_actualizaCategoria', $c->id)}}"class="btn btn-warning"><i class="fa fa-pencil"></i></a>
                                         <a href="{{route('eliminarCategoria', $c->id)}}" class="btn btn-danger" onclick="return desactivarCat()"><i class="fa fa-close"></i></a>
                                         @else
                                         
-
                                         <a href="{{route('activarCategoria', $c->id)}}"class="btn btn-primary" onclick="return activarCat()"><i class="fa fa-check"></i></a>
-                                        @endif  
-                                        
+                                        @endif    
                                     </td>
                                     <td> {{ $c->id }} </td>
                                     <td> {{ $c->nombreCategoria }} </td>
