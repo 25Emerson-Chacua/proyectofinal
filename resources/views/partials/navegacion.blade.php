@@ -37,11 +37,11 @@
                   </li>
 
                   <li>
-                    <a href="usuarios.php"><i class="fa fa-user"></i><span>Usuarios</span></a>
+                    <a href="{{ url('/descripcion') }}"><i class="fa fa-user"></i><span>¿Quiénes somos?</span></a>
                   </li>
 
                   <li>
-                    <a href="{{ url('/descripcion') }}"><i class="fa fa-user"></i><span>¿Quiénes somos?</span></a>
+                    <a href="usuarios.php"><i class="fa fa-user"></i><span>Usuarios</span></a>
                   </li>
 
                 </ul>

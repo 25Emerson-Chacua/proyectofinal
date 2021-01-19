@@ -1,5 +1,30 @@
 @extends('layout.master')
 @section('content')
+
+<script type="text/javascript">
+    function activarPro() 
+    {
+        var respuesta =  confirm("¿Desea activar la categoria??");
+        if(respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+    function desactivarPro() {
+        var respuesta =  confirm("¿Desea desactivar la categoria??");
+        if(respuesta == true){
+            return true;
+        }
+        else{
+            return false;
+        }
+        
+    }
+</script>
+
 <div  class="container">
     <div  class="row">
         <div  class="col-md-4">

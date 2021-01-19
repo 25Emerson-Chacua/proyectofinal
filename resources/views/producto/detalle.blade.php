@@ -4,7 +4,7 @@
 <script type="text/javascript">
     function activarPro() 
     {
-        var respuesta =  confirm("Desea activar la categoria??");
+        var respuesta =  confirm("¿Desea activar la categoria??");
         if(respuesta == true){
             return true;
         }
@@ -14,7 +14,7 @@
         
     }
     function desactivarPro() {
-        var respuesta =  confirm("Desea desactivar la categoria??");
+        var respuesta =  confirm("¿Desea desactivar la categoria??");
         if(respuesta == true){
             return true;
         }
@@ -49,18 +49,22 @@
                     <h5 class="text letra "> Categoria: #{{$productos->categoria}} {{$productos->nombreCategoria}} </h5>
                 </div>
                 <div class="form-row mb-4">
-                            <div class="col">
-                                <!-- First name -->
-                                <a href='{{url("productos/actualizar/$productos->id")}}' class="btn btn-primary"><i class="fa fa-pencil"></i></a>
-                            </div>
-                            <div class="col">
-                                <!-- Last name -->
-                                <a href='{{url("productos/eliminar/$productos->id")}}' class="btn btn-danger" onclick="return desactivarPro()"><i class="fa fa-close"></i></a>  
+                    <div class="col">
+                        <!-- First name -->
+                        <a href='{{url("productos/actualizar/$productos->id")}}' class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+                    </div>
+                    
+                    <div class="col">
+                        <!-- Last name -->
+                        <a href='{{url("productos/eliminar/$productos->id")}}' class="btn btn-danger" onclick="return desactivarPro()"><i class="fa fa-close"></i></a>  
                                 
-                            </div>
-                            <div class="col">
-                                  <a href="{{route('listadoProductos')}}" class="btn btn-success" >«</a>
-                            </div>  
+                    </div>
+                    <div class="col">
+                        <a href="{{route('activarProducto', $productos->id)}}"class="btn btn-primary" onclick="return activarPro()"><i class="fa fa-check"></i></a>
+                    </div>
+                    <div class="col">
+                        <a href="{{route('listadoProductos')}}" class="btn btn-success" >«</a>
+                    </div>  
                 </div> 
             </div>         
         </div>
