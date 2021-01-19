@@ -4,7 +4,11 @@
 <script type="text/javascript">
     function activarPro() 
     {
+<<<<<<< HEAD
         var respuesta =  confirm("¿Desea activar la categoria??");
+=======
+        var respuesta =  confirm("Desea activar el Producto??");
+>>>>>>> 7dcb2995863eaa1e3c8871ba5bca1543d17073a4
         if(respuesta == true){
             return true;
         }
@@ -14,7 +18,11 @@
         
     }
     function desactivarPro() {
+<<<<<<< HEAD
         var respuesta =  confirm("¿Desea desactivar la categoria??");
+=======
+        var respuesta =  confirm("Desea desactivar el Producto??");
+>>>>>>> 7dcb2995863eaa1e3c8871ba5bca1543d17073a4
         if(respuesta == true){
             return true;
         }
@@ -45,7 +53,9 @@
                 <div >
                     <h5 class="text letra "> Identificador: {{$productos->id}} </h5>                    
                     <h5 class="text letra "> Cantidad: {{$productos->cantidad}} </h5>
+                    
                     <h5 class="text letra "> Precio: {{$productos->precio}} </h5>
+                    
                     <h5 class="text letra "> Categoria: #{{$productos->categoria}} {{$productos->nombreCategoria}} </h5>
                 </div>
                 <div class="form-row mb-4">

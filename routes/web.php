@@ -63,3 +63,7 @@ Route::get('productos/consulta', [ProductosController::class, 'formulario_consul
 Route::post('productos/consulta', [ProductosController::class, 'consultar']);
 
 Route::get('productos/{id}/{descripcion?}', [ProductosController::class, 'descripcion']);
+
+
+
+

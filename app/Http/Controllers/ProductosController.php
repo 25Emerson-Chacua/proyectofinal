@@ -67,6 +67,7 @@ class ProductosController extends Controller
             $producto->nombreProducto = $request->input('nombrePro');
             $producto->cantidad = $request->input('cantidadPro');
             $producto->precio = $request->input('precioPro');
+            $producto->estado = '1';
             if($request->hasFile('urlfoto')){
                 $file = $request->file("urlfoto");
                 $nombrearchivo = $file->getClientOriginalName();
@@ -105,16 +106,16 @@ class ProductosController extends Controller
     }
 
     public function eliminar($id){
-        $clie = Producto::findOrFail($id);
-        $clie->estado = '0';
-        $clie->save();
+        $producto = Producto::findOrFail($id);
+        $producto->estado = '0';
+        $producto->save();
         return redirect()->route('listadoProductos');
     }
 
     public function activar($id){
-        $clie = Producto::findOrFail($id);
-        $clie->estado = '1';
-        $clie->save();
+        $producto = Producto::findOrFail($id);
+        $producto->estado = '1';
+        $producto->save();
         return redirect()->route('listadoProductos');
     }
 
