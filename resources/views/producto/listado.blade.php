@@ -98,13 +98,14 @@
                                 <div align="center">
                                     <h6 class="letra"> Precio: {{$p->precio}} </h6>
                                     <h6 class="letra"> {{$p->nombreCategoria}} </h6>
-                                    <h6 class="letra"> Estado: {{$p->estado}} </h6>
+                                    <h6 class="letra"> Estado: 
 
                                     @if($p->estado==1)
                                     <span class="label bg-primary">Activado</span>
                                     @else
                                     <span class="label bg-warning">Desactivado</span>
                                     @endif
+                                    </h6>
                                 </div>
                                 <a class="btn btn-warning" href="#" role="button" data-toggle="collapse" data-target="#comprar{{$p->id}}">Comprar</a>
                                 <form id="comprar{{$p->id}}" class="letra collapse" action='{{url("productos/comprar")}}' method= "POST">

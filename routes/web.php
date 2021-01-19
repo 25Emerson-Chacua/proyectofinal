@@ -54,10 +54,14 @@ Route::get('productos/actualizar/{id}', [ProductosController::class, 'formulario
 
 Route::post('productos/actualizar/{id}', [ProductosController::class, 'actualizar']);
 
-Route::get('productos/eliminar/{id}', [ProductosController::class, 'eliminar']);
+Route::get('productos/eliminar/{id}', [ProductosController::class, 'eliminar'])->name('eliminarProducto');
+
+Route::get('Productos/activar/{id}', [ProductosController::class, 'activar'])->name('activarProducto');
 
 Route::get('productos/consulta', [ProductosController::class, 'formulario_consultar']);
 
 Route::post('productos/consulta', [ProductosController::class, 'consultar']);
 
 Route::get('productos/{id}/{descripcion?}', [ProductosController::class, 'descripcion']);
+
+
